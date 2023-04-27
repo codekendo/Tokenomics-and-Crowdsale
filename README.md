@@ -36,8 +36,8 @@ deploying smart contracts on Remix and linking with Ganache via MetaMask using I
   <strong>Reading</strong>
   </summary>
 
-* **Block Chain**:
-* **Smart Contracts**:
+* **Block Chain**: [Wikipedia](https://en.wikipedia.org/wiki/Blockchain), [Investopedia](https://www.investopedia.com/terms/b/blockchain.asp), [AWS](https://aws.amazon.com/what-is/blockchain/)
+* **Smart Contracts**: [Wikipedia](https://en.wikipedia.org/wiki/Smart_contract), [Investopedia](https://www.investopedia.com/terms/s/smart-contracts.asp), [Ethereum](https://ethereum.org/en/developers/docs/smart-contracts/)
 
 </details>
 
@@ -304,8 +304,8 @@ contract CustomerAccount {
 
 ## 4. Tokenomics
 
-| Activity Time:       0:40 | Elapsed Time:      1:10 |
-|---------------------------|-------------------------|
+| Activity Time:       0:40 | Elapsed Time:      1:25 |
+|---------------------------|------------------------|
 
 <details>
   <summary><strong> 4.1 Introduction to Tokenomics (5 min)</strong></summary>
@@ -484,7 +484,7 @@ contract CustomerAccount {
 
 ## 5. Crowdsale
 
-| Activity Time:       0:20 | Elapsed Time:      1:50 |
+| Activity Time:       0:20 | Elapsed Time:      1:45 |
 |---------------------------|-------------------------|
 
 <details>
@@ -594,7 +594,7 @@ contract KrypTokenCrowdsaleDeployer {
 
 ## 6. Q & A
 
-| Activity Time:       0:10 | Elapsed Time:      2:00 |
+| Activity Time:       0:15 | Elapsed Time:      2:00 |
 |---------------------------|-------------------------|
 
 <details>
