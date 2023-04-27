@@ -36,8 +36,10 @@ deploying smart contracts on Remix and linking with Ganache via MetaMask using I
   <strong>Reading</strong>
   </summary>
 
-* **Block Chain**: [Wikipedia](https://en.wikipedia.org/wiki/Blockchain), [Investopedia](https://www.investopedia.com/terms/b/blockchain.asp), [AWS](https://aws.amazon.com/what-is/blockchain/)
-* **Smart Contracts**: [Wikipedia](https://en.wikipedia.org/wiki/Smart_contract), [Investopedia](https://www.investopedia.com/terms/s/smart-contracts.asp), [Ethereum](https://ethereum.org/en/developers/docs/smart-contracts/)
+* **Block Chain
+  **: [Wikipedia](https://en.wikipedia.org/wiki/Blockchain), [Investopedia](https://www.investopedia.com/terms/b/blockchain.asp), [AWS](https://aws.amazon.com/what-is/blockchain/)
+* **Smart Contracts
+  **: [Wikipedia](https://en.wikipedia.org/wiki/Smart_contract), [Investopedia](https://www.investopedia.com/terms/s/smart-contracts.asp), [Ethereum](https://ethereum.org/en/developers/docs/smart-contracts/)
 
 </details>
 
@@ -65,7 +67,7 @@ deploying smart contracts on Remix and linking with Ganache via MetaMask using I
 
 ## 2. Smart Contracts
 
-| Activity Time:       0:25 | Elapsed Time:      0:35 |
+| Activity Time:       0:20 | Elapsed Time:      0:30 |
 |---------------------------|-------------------------|
 
 <details>
@@ -123,7 +125,7 @@ contract CustomerAccount {
 
 * Solidity Data Types
 
-![Solidity Data Types](/images/1-2-solidity-data-types.png)
+![Solidity Data Types](Images/2_3_Solidity_Data_Types.png)
 
 * Note the following about the Solidity data types:
 
@@ -197,7 +199,48 @@ contract CustomerAccount {
 
     * [Storage, Memory and the Stack](https://docs.soliditylang.org/en/v0.5.11/introduction-to-smart-contracts.html?highlight=storage#storage-memory-and-the-stack)
 
+</details>
 
+- - -
+
+## 3. Real Economics
+
+| Activity Time:       0:20 | Elapsed Time:      0:50 |
+|---------------------------|-------------------------|
+
+<details>
+<summary>
+<strong> 3.1 This Payable (5 min)</strong>
+</summary>
+
+**Starter**: [CustomerAccount](Activities/3_1_This_Payable/Unsolved/CustomerAccount.sol)
+
+**Solution**: [CustomerAccount](Activities/3_1_This_Payable/Solved/CustomerAccount.sol)
+
+* We are going to add `sendRemittance`, `deposit` functions to `CustomerAccount`
+
+    * A function `sendRemittance` which accepts an `amount` and `recipient` and transfer `amount` to the `recipient`.
+      We would update the `accountBalance` using the `address(this).balance`
+
+    * A `payable` function `deposit` which accepts ether sent to the contract. We would update the `accountBalance`
+      using
+      the `address(this).balance`
+
+    * A fallback function is used in two scenarios: (1) if the function identifier doesn't match any other function in
+      the contract, or (2) if the sending function doesn't supply any data, so we have to add the `external` keyword so
+      that other contracts or transactions can call this contract. We also add the `payable` keyword so that the
+      contract can collect any amount of ether that gets sent to it via the contract address.
+
+</details>
+
+<details>
+<summary>
+<strong> 3.2 Lets Deploy (5 min)</strong>
+</summary>
+
+**Starter**: [CustomerAccount](Activities/3_2_Lets_Deploy/Unsolved/CustomerAccount.sol)
+
+* We will deploy the `CustomerAccount` smart contract.
 * In the Remix IDE, the functions we can observe in the smart contract may have buttons of different colors.
 
     * Constant, or “pure”, functions in Solidity have blue buttons. Clicking this type of button does not create a new
@@ -214,43 +257,12 @@ contract CustomerAccount {
 
 <details>
 <summary>
-<strong> 2.5 This Payable (5 min)</strong>
+<strong> 3.3 Conditions Required (5 min)</strong>
 </summary>
 
-**Starter**: [CustomerAccount](Activities/2_5_This_Payable/Unsolved/CustomerAccount.sol)
+**Starter**: [CustomerAccount](Activities/3_3_Conditions_Required/Unsolved/CustomerAccount.sol)
 
-**Solution**: [CustomerAccount](Activities/2_5_This_Payable/Solved/CustomerAccount.sol)
-
-* We are going to add `sendRemittance`, `deposit` functions to `CustomerAccount`
-
-    * A function `sendRemittance` which accepts and `amount` and `recipient` and transfer `amount` to the `recipient`.
-      We would update the `accountBalance` using the `address(this).balance`
-
-    * A `payable` function `deposit` which accept ether send to the contract. We would update the `accountBalance` using
-      the `address(this).balance`
-
-    * A fallback function is used in two scenarios: (1) if the function identifier doesn't match any other function in
-      the contract, or (2) if the sending function doesn't supply any data, so we have to add the `external` keyword so
-      that other contracts or transactions can call this contract. We also add the `payable` keyword so that the
-      contract can collect any amount of ether that gets sent to it via the contract address.
-
-</details>
-
-- - -
-
-## 3. Real Economics
-
-| Activity Time:       0:10 | Elapsed Time:      0:45 |
-|---------------------------|-------------------------|
-
-<details>
-<summary>
-<strong> 3.1 Conditions Required (5 min)</strong>
-</summary>
-
-**Starter**: [CustomerAccount](Activities/3_1_Conditions_Required/Unsolved/CustomerAccount.sol)
-
-**Solution**: [CustomerAccount](Activities/3_1_Conditions_Required/Solved/CustomerAccount.sol)
+**Solution**: [CustomerAccount](Activities/3_3_Conditions_Required/Solved/CustomerAccount.sol)
 
 * We are going to add a `withdraw` functions to `CustomerAccount`
 
@@ -264,12 +276,12 @@ contract CustomerAccount {
 
 <details>
 <summary>
-<strong> 3.2 Message to the World (5 min)</strong>
+<strong> 3.4 Message to the World (5 min)</strong>
 </summary>
 
-**Starter**: [CustomerAccount](Activities/3_2_Conditions_Required/Unsolved/CustomerAccount.sol)
+**Starter**: [CustomerAccount](Activities/3_4_Message_to_the_World/Unsolved/CustomerAccount.sol)
 
-**Solution**: [CustomerAccount](Activities/3_2_Conditions_Required/Solved/CustomerAccount.sol)
+**Solution**: [CustomerAccount](Activities/3_4_Message_to_the_World/Solved/CustomerAccount.sol)
 
 * The `msg` object represents the transaction call (originated by an Ethereum address) or the message call (originated
   by a contract's address) that triggers a contract execution.
@@ -304,8 +316,8 @@ contract CustomerAccount {
 
 ## 4. Tokenomics
 
-| Activity Time:       0:40 | Elapsed Time:      1:25 |
-|---------------------------|------------------------|
+| Activity Time:       0:40 | Elapsed Time:      1:30 |
+|---------------------------|-------------------------|
 
 <details>
   <summary><strong> 4.1 Introduction to Tokenomics (5 min)</strong></summary>
@@ -314,15 +326,16 @@ contract CustomerAccount {
   distributed, traded, and used. A blockchain token represents an asset or utility on a blockchain platform.
   Essentially, it’s a symbol of value.
 
-* Lets understand the concept of tokens by using the following example:
+* Let's understand the concept of tokens by using the following example:
 
     * Imagine you are on Superman's planet Kryptonite. When entering the Kryptonite, you can exchange cash for
       Kryptonite tokens that are worth $1 each.
 
     * Within the ecosystem of the Kryptonite, a Kryptonite token represents your ownership of $1.
 
-    * You can exchange the Kryptonite token for a certain amount of time Superhuman time. Or, you can transfer your
-      ownership of the $1 cents to someone else by giving the Kryptonite token to another person.
+    * You can exchange the Kryptonite token for a certain amount of Superhuman time which can give you superhuman
+      strength. Or, you can transfer your ownership of the $1 to someone else by giving the Kryptonite token to
+      another person.
 
     * Blockchain tokens function much the same way. But, blockchain tokens get rendered digitally rather than as
       physical objects.
@@ -484,7 +497,7 @@ contract CustomerAccount {
 
 ## 5. Crowdsale
 
-| Activity Time:       0:20 | Elapsed Time:      1:45 |
+| Activity Time:       0:20 | Elapsed Time:      1:50 |
 |---------------------------|-------------------------|
 
 <details>
@@ -538,9 +551,11 @@ contract CustomerAccount {
 <strong> 5.3 KrypTokenCrowdsale (5 min)</strong>
 </summary>
 
-**Starter**: [KrypToken](Activities/5_3_KrypTokenCrowdsale/Unsolved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_3_KrypTokenCrowdsale/Unsolved/KrypTokenCrowdsale.sol)
+**Starter
+**: [KrypToken](Activities/5_3_KrypTokenCrowdsale/Unsolved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_3_KrypTokenCrowdsale/Unsolved/KrypTokenCrowdsale.sol)
 
-**Solution**: [KrypToken](Activities/5_3_KrypTokenCrowdsale/Solved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_3_KrypTokenCrowdsale/Solved/KrypTokenCrowdsale.sol)
+**Solution
+**: [KrypToken](Activities/5_3_KrypTokenCrowdsale/Solved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_3_KrypTokenCrowdsale/Solved/KrypTokenCrowdsale.sol)
 
 * [Crowdsale.sol GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/Crowdsale.sol)
 
@@ -559,9 +574,11 @@ contract CustomerAccount {
 <strong> 5.4 Auto Deploy (5 min)</strong>
 </summary>
 
-**Starter**: [KrypToken](Activities/5_4_Auto_Deploy/Unsolved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_4_Auto_Deploy/Unsolved/KrypTokenCrowdsale.sol), [KrypTokenCrowdsaleDeployer](Activities/5_4_Auto_Deploy/Unsolved/KrypTokenCrowdsaleDeployer.sol)
+**Starter
+**: [KrypToken](Activities/5_4_Auto_Deploy/Unsolved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_4_Auto_Deploy/Unsolved/KrypTokenCrowdsale.sol), [KrypTokenCrowdsaleDeployer](Activities/5_4_Auto_Deploy/Unsolved/KrypTokenCrowdsaleDeployer.sol)
 
-**Solution**: [KrypToken](Activities/5_4_Auto_Deploy/Solved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_4_Auto_Deploy/Solved/KrypTokenCrowdsale.sol), [KrypTokenCrowdsaleDeployer](Activities/5_4_Auto_Deploy/Solved/KrypTokenCrowdsaleDeployer.sol)
+**Solution
+**: [KrypToken](Activities/5_4_Auto_Deploy/Solved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_4_Auto_Deploy/Solved/KrypTokenCrowdsale.sol), [KrypTokenCrowdsaleDeployer](Activities/5_4_Auto_Deploy/Solved/KrypTokenCrowdsaleDeployer.sol)
 
 * We will use contract to deploy our `KrypToken` and `KrypTokenCrowdsale`
 
@@ -586,15 +603,13 @@ contract KrypTokenCrowdsaleDeployer {
 }
 ```
 
-
-
 </details>
 
 - - -
 
 ## 6. Q & A
 
-| Activity Time:       0:15 | Elapsed Time:      2:00 |
+| Activity Time:       0:10 | Elapsed Time:      2:00 |
 |---------------------------|-------------------------|
 
 <details>

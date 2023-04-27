@@ -8,22 +8,22 @@ contract CustomerAccount {
     string customerLastName;
 
     function getInfo()
-        public
-        view
-        returns (
-            address,
-            bool,
-            uint256,
-            string memory,
-            string memory
-        )
+    public
+    view
+    returns (
+        address,
+        bool,
+        uint256,
+        string memory,
+        string memory
+    )
     {
         return (
-            owner,
-            isNewAccount,
-            accountBalance,
-            customerFirstName,
-            customerLastName
+        owner,
+        isNewAccount,
+        accountBalance,
+        customerFirstName,
+        customerLastName
         );
     }
 
@@ -41,9 +41,14 @@ contract CustomerAccount {
         customerLastName = newCustomerLastName;
     }
 
-    // Add a function sendRemittance which accepts and amount and recipient and transfer amount to the recipient and update the accountBalance.
+    function sendRemittance(uint256 amount, address payable recipient) public {
+        recipient.transfer(amount);
+        accountBalance = address(this).balance;
+    }
 
-    // Add a payable function deposit which accept ether send to the contract and update the accountBalance.
+    function deposit() public payable {
+        accountBalance = address(this).balance;
+    }
 
-    // Add a payable fallback function
+    function() external payable {}
 }
