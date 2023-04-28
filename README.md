@@ -447,8 +447,6 @@ contract CustomerAccount {
 
 * [ERC-721 Non-Fungible Token Standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/)
 
-* [OpenZeppelin ERC-20 documentation](https://docs.openzeppelin.com/contracts/2.x/api/token/erc20)
-
 * [OpenZeppelin ERC20.sol GitHub page](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 
 * [CryptoKitties](https://www.cryptokitties.co/)
@@ -462,7 +460,7 @@ contract CustomerAccount {
   <strong> 4.7 KrypToken is ERC-20 (5 min)</strong>
   </summary>
 
-**Starter**: [KrypToken](Activities/4_7_KrypToken_is_ERC/Unsolved/KrypToken.sol)
+**Starter**: [KrypToken](Activities/4_7_KrypToken_is_ERC-20/Unsolved/KrypToken.sol)
 
 **Solution**: [KrypToken](Activities/4_7_KrypToken_is_ERC-20/Solved/KrypToken.sol)
 
@@ -551,11 +549,9 @@ contract CustomerAccount {
 <strong> 5.3 KrypTokenCrowdsale (5 min)</strong>
 </summary>
 
-**Starter
-**: [KrypToken](Activities/5_3_KrypTokenCrowdsale/Unsolved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_3_KrypTokenCrowdsale/Unsolved/KrypTokenCrowdsale.sol)
+**Starter**: [KrypToken](Activities/5_3_KrypTokenCrowdsale/Unsolved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_3_KrypTokenCrowdsale/Unsolved/KrypTokenCrowdsale.sol)
 
-**Solution
-**: [KrypToken](Activities/5_3_KrypTokenCrowdsale/Solved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_3_KrypTokenCrowdsale/Solved/KrypTokenCrowdsale.sol)
+**Solution**: [KrypToken](Activities/5_3_KrypTokenCrowdsale/Solved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_3_KrypTokenCrowdsale/Solved/KrypTokenCrowdsale.sol)
 
 * [Crowdsale.sol GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v2.5.0/contracts/crowdsale/Crowdsale.sol)
 
@@ -574,11 +570,9 @@ contract CustomerAccount {
 <strong> 5.4 Auto Deploy (5 min)</strong>
 </summary>
 
-**Starter
-**: [KrypToken](Activities/5_4_Auto_Deploy/Unsolved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_4_Auto_Deploy/Unsolved/KrypTokenCrowdsale.sol), [KrypTokenCrowdsaleDeployer](Activities/5_4_Auto_Deploy/Unsolved/KrypTokenCrowdsaleDeployer.sol)
+**Starter**: [KrypToken](Activities/5_4_Auto_Deploy/Unsolved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_4_Auto_Deploy/Unsolved/KrypTokenCrowdsale.sol), [KrypTokenCrowdsaleDeployer](Activities/5_4_Auto_Deploy/Unsolved/KrypTokenCrowdsaleDeployer.sol)
 
-**Solution
-**: [KrypToken](Activities/5_4_Auto_Deploy/Solved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_4_Auto_Deploy/Solved/KrypTokenCrowdsale.sol), [KrypTokenCrowdsaleDeployer](Activities/5_4_Auto_Deploy/Solved/KrypTokenCrowdsaleDeployer.sol)
+**Solution**: [KrypToken](Activities/5_4_Auto_Deploy/Solved/KrypToken.sol), [KrypTokenCrowdsale](Activities/5_4_Auto_Deploy/Solved/KrypTokenCrowdsale.sol), [KrypTokenCrowdsaleDeployer](Activities/5_4_Auto_Deploy/Solved/KrypTokenCrowdsaleDeployer.sol)
 
 * We will use contract to deploy our `KrypToken` and `KrypTokenCrowdsale`
 
