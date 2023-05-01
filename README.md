@@ -111,6 +111,7 @@ contract CustomerAccount {
     string message = "Send me monies!";
 }
   ```
+![image](https://user-images.githubusercontent.com/8437334/235417257-69abd850-ba60-48a4-8545-ce7dac0b3ede.png)
 
 </details>
 
